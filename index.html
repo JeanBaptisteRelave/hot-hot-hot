@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Hot Hot</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script async src="script.js"></script>
+</head>
+<body>
+    <div id="left_menu">
+        <h1>HOT HOT HOT</h1>
+
+        <span>Température</span>
+        <p data-div="live_menu" id="selected">Live</p>
+        <p data-div="historique_menu">Historique</p>
+
+        <span>Application</span>
+        <p data-div="account_menu">Mon compte</p>
+    </div>
+
+    <div id="right_menu">
+        <header>
+            <h1 id="menu_tilte">Live</h1>
+            <img id="menu_loader" src="img/chargement.gif" alt="Chargement GIF">
+            <div>
+                <p>Mon compte</p>
+                <img src="img/TAZ.png" alt="Photo de profil du compte hot hot hot">
+            </div>
+            
+        </header>
+
+        <div id="live_menu">
+            <div id="temp_int">
+                <h2>Température Intérieur</h2>
+                <h1>0°C</h1>
+                <p id="alerte_int">alerte : Banquise en vue !</p>
+            </div>
+
+            <div id="temp_ext">
+                <h2>Température Exterieur</h2>
+                <h1>0°C</h1>
+                <p id="alerte_ext">alerte : Banquise en vue !</p>
+            </div>
+        </div>
+
+        <div id="historique_menu">
+            <div id="historique_menu_grid">
+                <div id="h_temp_int">
+                    <h2>Température Intérieur</h2>
+                    <div>
+                        <div>
+                            <p>Maximale :</p>
+                            <h1 id="maxint">0°C</h1>
+                        </div>
+    
+                        <div>
+                            <p>Minimale :</p>
+                            <h1 id="minint">0°C</h1>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="h_temp_ext">
+                    <h2>Température Exterieur</h2>
+                    <div>
+                        <div>
+                            <p>Maximale :</p>
+                            <h1 id="maxext">0°C</h1>
+                        </div>
+    
+                        <div>
+                            <p>Minimale :</p>
+                            <h1 id="minext">0°C</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="grid_graphes">
+                <div class="graphe"><canvas id="graphe1"></canvas></div>
+                <div class="graphe"><canvas id="graphe2"></canvas></div>
+            </div>
+        </div>
+
+        <div id="account_menu">
+            <img src="img/TAZ.png" alt="Photo de profil du compte hot hot hot">
+            <h1>Nom d'utilisateur</h1>
+            <h2>Déconnexion...</h2>
+        </div>
+
+        <div id="log">
+            <h1>Last log -></h1>
+            <div id="log_list"></div>
+        </div>
+    </div>
+</body>
+</html>
